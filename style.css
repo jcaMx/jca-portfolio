@@ -10,8 +10,13 @@ body {
     color: white;  
     font-family: Arial, sans-serif;
 }
+h2{
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-/* Navbar */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -20,10 +25,14 @@ body {
     background: #2d2d2d;
     color: white;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 
 .logo {
     font-size: 22px;
-    font-weight: bold;
+
 }
 
 .nav-links {
@@ -52,7 +61,7 @@ body {
     cursor: pointer;
 }
 
-/* Hero Section */
+
 .hero {
     display: flex;
     height: 100vh;
@@ -153,13 +162,13 @@ body {
 .about-me h2 {
     font-size: 36px;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
 .container {
     display: flex; /* tapad, horizontally*/
     justify-content: center; 
     gap: 50px; 
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 20px
 }
 .card {
@@ -180,12 +189,42 @@ body {
     font-size: 14px;
     color: gray;
 }
-.projects{
+.works{
     padding: 150px;
+    margin: 1
+
 }
-.projects h2{
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 50px;
+.artcard {
+    background-color: #1f2020;  
+    color: white; 
+    padding: 15px;
+    border-radius: 10px;  
+    text-align: center; 
 }
+
+.artcard img {
+    width: 300px; 
+    height: auto; 
+    display: block;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .artcard {
+        max-width: 80%;
+    }
+}
+
+.footer{
+    color:gray;
+    text-align:center;
+}
+
+
+
 
