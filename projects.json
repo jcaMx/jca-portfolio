@@ -1,0 +1,35 @@
+[
+    {
+    "photo": "images/portfolio.png",
+    "name": "Portfolio Website",
+    "description": "A personal portfolio website designed to showcase my projects, skills, and professional experience. It features a modern responsive layout, interactive project galleries, and detailed information about my technical expertise and achievements."
+  },
+    {
+    "photo": "images/project-marahuyo.png",
+    "name": "Hotel Booking System",
+    "description": "A comprehensive hotel management and booking system built with Laravel, offering streamlined scheduling, room management, and reservation tracking. The platform includes user authentication, real-time availability updates, and administrative tools for efficient hotel operations."
+  },
+
+    {
+    "photo": "images/project-healthcare-sched.png",
+    "name": "Healthcare Scheduling System",
+    "description": "A robust Windows application developed for healthcare providers to manage appointments and schedules systematically. It supports patient record management, automated reminders, and resource allocation, enhancing workflow efficiency in clinical environments."
+  },
+
+  {
+    "photo": "images/project-chatbot.PNG",
+    "name": "Discord Chat Archiver Application",
+    "description": "A Discord bot application that lets you archive or download all your chat history, including images, emojis, etc."
+  },
+   {
+    "photo": "images/python.svg",
+    "name": "AI Chatbot",
+    "description": "A command-line interface (CLI) AI chatbot built with Python, capable of natural language understanding and contextual conversation. It integrates with Gemini API, supports multiple conversation flows, and demonstrates practical applications of machine learning in user interaction."
+  },
+     {
+    "photo": "images/project-routerover.png",
+    "name": "RouteRover",
+    "description": "A user interface prototype that aids jeepney, taxi, and tricycle commuters in Davao City with route planning and fare calculation."
+  }
+
+]
