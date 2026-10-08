@@ -42,6 +42,7 @@
       <ul class="hidden md:flex items-center justify-center gap-6 lg:gap-8 md:col-start-2">
         <li><a href="#" class="hover:text-gray-400 transition">Home</a></li>
         <li><a href="#about-me" class="hover:text-gray-400 transition">About Me</a></li>
+        <li><a href="#technical-skills" class="hover:text-gray-400 transition">Technical Skills</a></li>
         <li><a href="#works" class="hover:text-gray-400 transition">Works</a></li>
       </ul>
 
@@ -61,6 +62,7 @@
       <ul class="space-y-2">
         <li><a href="#" class="block hover:text-gray-400 transition">Home</a></li>
         <li><a href="#about-me" class="block hover:text-gray-400 transition">About Me</a></li>
+        <li><a href="#technical-skills" class="block hover:text-gray-400 transition">Technical Skills</a></li>
         <li><a href="#works" class="block hover:text-gray-400 transition">Works</a></li>
         <li>
           <a href="https://www.linkedin.com/in/jericca-maxene-oracion-822ba4266" 
@@ -123,14 +125,14 @@
       <div class="bg-[#1A1A1A] p-6 shadow ">
         <img src="images/coding1.jpg" alt="Experience Icon" class="w-full h-48 object-cover mb-4">
         <h3 class="text-xl font-semibold mb-2">Experience</h3>
-        <p class="mb-2">Personal Digital Assistant | Digital Mixology (2 Years)</p>
+        <p class="mb-2">Junior Software Developer | Digital Mixology ( 4 Years, Remote)</p>
         <p class="text-gray-400">Helps the client in completing personal projects related to technology by providing research, technical support, and efficient task management.</p>
       </div>
 
       <div class="bg-[#1A1A1A] p-6 shadow">
         <img src="images/education.jpg" alt="Education Icon" class="w-full h-48 object-cover mb-4">
         <h3 class="text-xl font-semibold mb-2">Education</h3>
-        <p class="mb-2">3rd year BS Computer Science student</p>
+        <p class="mb-2">4th year BS Computer Science student</p>
         <p class="text-gray-400">Currently attending at STI College Davao</p>
         <p class="text-gray-400 mt-2">Currently working on my thesis: a game designed to help people learn Filipino Sign Language.</p>
       </div>
@@ -138,11 +140,57 @@
       <div class="bg-[#1A1A1A] p-6 shadow">
         <img src="images/skills.jpg" alt="Skills Icon" class="w-full h-48 object-cover mb-4">
         <h3 class="text-xl font-semibold mb-2">Skills</h3>
-        <p>Digital painting <br>Figma UI Design</p>
-        <p>Basic Python Programming | Basic Web Programming</p>
+        <p>Machine Learning & Data <br>Backend & Web Development </p>
+        <p>Databases & Tools</p>
         <p class="text-gray-400 mt-2">Continuously expanding knowledge in programming, algorithms, and system design.</p>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Technical Skills -->
+  <section id="technical-skills" class="px-6 py-12 md:px-8 md:py-16 scroll-mt-24">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-5xl md:text-6xl font-bold mb-4 text-center playfair">Tech Stack</h2>
+      <p class="text-gray-400 text-center mb-10">Technologies and tools I use to build and explore.</p>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <?php
+        $skillGroups = [
+          'Machine Learning & Data' => [
+            ['PyTorch', 'pytorch'], ['TensorFlow', 'tensorflow'], ['Transformers', 'huggingface'],
+            ['LSTM', 'keras'], ['Scikit-learn', 'scikitlearn'], ['Pandas', 'pandas'], ['NumPy', 'numpy'],
+            ['Data Preprocessing', 'python'],
+          ],
+          'Backend & Web Development' => [
+            ['Python', 'python'], ['FastAPI', 'fastapi'], ['Flask', 'flask'], ['Laravel', 'laravel'],
+            ['JavaScript', 'javascript'], ['RESTful APIs', 'fastapi'], ['Vue / Nuxt', 'vuedotjs'],
+            ['React', 'react'], ['HTML5', 'html5'], ['CSS3', 'css3'],
+          ],
+          'Databases & Tools' => [
+            ['PostgreSQL', 'postgresql'], ['MySQL', 'mysql'], ['Git', 'git'], ['GitHub', 'github'],
+          ],
+        ];
+        foreach ($skillGroups as $groupName => $skills): ?>
+          <div class="bg-[#1A1A1A] p-6 shadow">
+            <h3 class="text-xl font-semibold mb-5"><?= htmlspecialchars($groupName) ?></h3>
+            <ul class="grid grid-cols-2 gap-3">
+              <?php foreach ($skills as [$skillName, $iconName]): ?>
+                <li class="flex min-h-12 items-center gap-3 rounded bg-[#252525] px-3 py-2 text-sm text-gray-200">
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/<?= htmlspecialchars($iconName) ?>.svg"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    class="h-5 w-5 shrink-0 brightness-0 invert"
+                  >
+                  <span><?= htmlspecialchars($skillName) ?></span>
+                </li>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+        <?php endforeach; ?>
+      </div>
     </div>
   </section>
 
