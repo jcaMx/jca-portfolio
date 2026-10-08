@@ -1,10 +1,16 @@
 [
-    {
-    "photo": "images/portfolio.png",
-    "name": "Portfolio Website",
-    "description": "A personal portfolio website designed to showcase my projects, skills, and professional experience. It features a modern responsive layout, interactive project galleries, and detailed information about my technical expertise and achievements."
+  {
+    "photo": "images/signia.jpg",
+    "name": "Signia: Story-Driven Sign Language Learning Game",
+    "description": "An interactive game designed to teach sign language through engaging storytelling and gameplay. Players navigate through various scenarios, learning signs and phrases in context, while the game tracks progress and provides feedback to enhance the learning experience."
   },
-    {
+
+  {
+    "photo": "images/jamo-landing.png",
+    "name": "JAMO Lending Management System",
+    "description": "A comprehensive lending management system built with modern web technologies, designed to streamline loan processing, customer management, and financial tracking for lending institutions."
+  },
+  {
     "photo": "images/project-marahuyo.png",
     "name": "Hotel Booking System",
     "description": "A comprehensive hotel management and booking system built with Laravel, offering streamlined scheduling, room management, and reservation tracking. The platform includes user authentication, real-time availability updates, and administrative tools for efficient hotel operations."

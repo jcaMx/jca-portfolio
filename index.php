@@ -33,13 +33,13 @@
 
 
   <nav class="fixed top-0 left-0 w-full bg-[#1A1A1A] shadow z-50">
-    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+    <div class="max-w-6xl mx-auto grid grid-cols-[1fr_auto] md:grid-cols-[1fr_auto_1fr] items-center gap-x-4 px-4 sm:px-6 py-3 sm:py-4">
       
       <!-- Logo -->
       <h1 class="text-2xl font-bold playfair">jca.</h1>
 
       <!-- Desktop Menu -->
-      <ul class="hidden md:flex space-x-6">
+      <ul class="hidden md:flex items-center justify-center gap-6 lg:gap-8 md:col-start-2">
         <li><a href="#" class="hover:text-gray-400 transition">Home</a></li>
         <li><a href="#about-me" class="hover:text-gray-400 transition">About Me</a></li>
         <li><a href="#works" class="hover:text-gray-400 transition">Works</a></li>
@@ -48,16 +48,16 @@
       <!-- Contact Button -->
       <a href="https://www.linkedin.com/in/jericca-maxene-oracion-822ba4266" 
          target="_blank" 
-         class="hidden md:inline-block border border-gray-300 px-4 py-2 rounded-md hover:bg-gray-100 hover:text-black transition">
+         class="hidden md:inline-block justify-self-end border border-gray-300 px-4 py-2 rounded-md hover:bg-gray-100 hover:text-black transition">
          Contact Me
       </a>
 
       <!-- Mobile Menu Button -->
-      <button id="menuBtn" class="text-2xl md:hidden" aria-label="Toggle Menu">&#9776;</button>
+      <button id="menuBtn" class="justify-self-end text-2xl leading-none md:hidden" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-[#1A1A1A] px-6 pb-4 transition-all duration-300">
+    <div id="mobileMenu" class="hidden md:hidden bg-[#1A1A1A] px-4 sm:px-6 pb-4 transition-all duration-300">
       <ul class="space-y-2">
         <li><a href="#" class="block hover:text-gray-400 transition">Home</a></li>
         <li><a href="#about-me" class="block hover:text-gray-400 transition">About Me</a></li>
@@ -74,8 +74,19 @@
   </nav>
   <script>
     // Toggle mobile menu
-    document.getElementById("menuBtn").addEventListener("click", () => {
-      document.getElementById("mobileMenu").classList.toggle("hidden");
+    const menuButton = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", () => {
+      const isOpening = mobileMenu.classList.toggle("hidden") === false;
+      menuButton.setAttribute("aria-expanded", String(isOpening));
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
     });
   </script>
   
@@ -138,7 +149,7 @@
   <!-- Works -->
   <section id="works" class="p-8 mb-12">
 
-    <h2 class="text-6xl playfair font-bold mb-6 text-center">Works</h2>
+    <h2 class="text-6xl playfair font-bold mb-6 text-center">Projects</h2>
 
     <!-- Application Programs -->
     <h3 class="text-2xl font-semibold mb-4">Projects</h3>
@@ -193,19 +204,19 @@
         <h2 class="text-2xl font-bold playfair mb-2">jca.</h2>
         <p class="text-sm opacity-80 mb-2">Jericca Maxene Oracion</p>
         <p class="text-sm opacity-80 mb-2">Davao City, Philippines</p>
-        <p class="text-sm opacity-80 mb-2">jericca@digitalmixology.com</p>
+        <p class="text-sm opacity-80 mb-2">jericcamaxeneoracion@gmail.com</p>
         <div class="flex space-x-4 mt-4">
           <a href="https://www.linkedin.com/in/jericca-maxene-oracion-822ba4266" target="_blank" class="hover:text-blue-400 transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.036 0 3.6 2 3.6 4.594v5.602z"/>
             </svg>
           </a>
-          <a href="https://github.com/jeiknvs" target="_blank" class="hover:text-gray-400 transition-colors">
+          <a href="https://github.com/jcaMx" target="_blank" class="hover:text-gray-400 transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576 4.765-1.585 8.199-6.082 8.199-11.384 0-6.627-5.373-12-12-12z"/>
             </svg>
           </a>
-          <a href="mailto:jericca.oracion@gmail.com" class="hover:text-red-400 transition-colors">
+          <a href="mailto:jericcamaxeneoracion@gmail.com" class="hover:text-red-400 transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 13.065l-11.99-7.065v14c0 1.104.896 2 2 2h19.99c1.104 0 2-.896 2-2v-14l-11.99 7.065zm11.99-9.065c0-1.104-.896-2-2-2h-19.99c-1.104 0-2 .896-2 2v.217l11.99 7.065 11.99-7.065v-.217z"/>
             </svg>
